@@ -1,0 +1,23 @@
+<main class="contenedor asistentes">
+    <h1><%= nombrePagina %> </h1>
+
+    <% if(asistentes){ %> 
+        <ul class="listado-asistentes">
+            <% asistentes.forEach(asistente => { %> 
+                <li>
+                    <div class="imagen">
+                        <% if(asistente.imagen){ %> 
+                            <img src="/uploads/perfiles/<%= asistente.imagen %> " alt="">
+                        <% } %> 
+                    </div>
+                    <div class="texto">
+                        <%= asistente.nombre %> 
+                    </div>
+                </li>
+            <% }) %> 
+
+        </ul>
+    <% }else{ %> 
+        <P class="no-asistentes">No hay asistentes</P>
+    <% } %> 
+</main>
